@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+    background-color: #f8fafc;
+    color: #16233d;
+  }
+
+  ::selection {
+    background-color: #99f6e4;
+    color: #134e4a;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-navy-900 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-navy-800 hover:shadow-glow-navy active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-navy-200 bg-white px-6 py-3 text-sm font-semibold text-navy-800 transition-all duration-300 hover:border-navy-300 hover:bg-navy-50 active:scale-[0.98];
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-teal-600 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-teal-700 hover:shadow-glow active:scale-[0.98];
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-medium text-navy-600 transition-all duration-200 hover:bg-navy-50 hover:text-navy-900;
+  }
+
+  .card {
+    @apply rounded-2xl border border-gray-100 bg-white shadow-soft transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply hover:shadow-card hover:-translate-y-0.5;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold;
+  }
+
+  .badge-high {
+    @apply bg-red-50 text-red-700;
+  }
+
+  .badge-medium {
+    @apply bg-amber-50 text-amber-700;
+  }
+
+  .badge-low {
+    @apply bg-emerald-50 text-emerald-700;
+  }
+
+  .badge-info {
+    @apply bg-cyan-50 text-cyan-700;
+  }
+
+  .badge-neutral {
+    @apply bg-gray-100 text-gray-600;
+  }
+
+  .input-field {
+    @apply w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-navy-900 placeholder-gray-400 transition-all duration-200 focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-500/20;
+  }
+
+  .label-text {
+    @apply mb-1.5 block text-sm font-semibold text-navy-800;
+  }
+
+  .section-padding {
+    @apply px-4 py-16 sm:px-6 lg:px-8 lg:py-24;
+  }
+
+  .container-max {
+    @apply mx-auto max-w-7xl;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent;
+  }
+
+  .glass {
+    @apply bg-white/80 backdrop-blur-lg;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 3px;
+  }
+
+  .animate-stagger-1 { animation-delay: 0.1s; animation-fill-mode: both; }
+  .animate-stagger-2 { animation-delay: 0.2s; animation-fill-mode: both; }
+  .animate-stagger-3 { animation-delay: 0.3s; animation-fill-mode: both; }
+  .animate-stagger-4 { animation-delay: 0.4s; animation-fill-mode: both; }
+  .animate-stagger-5 { animation-delay: 0.5s; animation-fill-mode: both; }
+  .animate-stagger-6 { animation-delay: 0.6s; animation-fill-mode: both; }
+}
